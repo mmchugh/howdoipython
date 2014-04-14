@@ -1,0 +1,34 @@
+title: Write something
+area: Foundation
+description: |
+With Python, you can tell your computer to write something on your screen in just one line.
+prerequisites: 
+    - setup
+examples:
+    - description: Let's print "Hello world".        
+      file: helloworld.py
+    - description: Congratulations!
+      file:
+resources:
+    - title: A Good First Program
+      link: http://learnpythonthehardway.org/book/ex1.html
+      origin: Learn Python The Hard Way
+      origin_link: http://www.learnpythonthehardway.com
+      medium: web
+      style: hands-on
+      difficulty: 1
+    - title: The Beginning - helloworld.py
+      link: http://pymbook.readthedocs.org/en/latest/thebeginning.html#helloworld-py
+      origin: Python for You and Me
+      origin_link: http://pymbook.readthedocs.org/en/latest/index.html
+      medium: web
+      style: guide
+      difficulty: 2
+    - title: The way of the program
+      link: http://greenteapress.com/thinkpython/html/thinkpython002.html
+      origin: Think Python: How to Think Like a Computer Scientist
+      origin_link: http://greenteapress.com/thinkpython/html/index.html
+      medium: web
+      style: theory
+further_topics:
+    - comment
