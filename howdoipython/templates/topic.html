@@ -1,0 +1,41 @@
+<DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			{{ topic.title }} - How do I Python?
+		</title>
+	</head>
+
+	<body>
+		<h1> {{ topic.title }}</h1>
+
+		<h2>Why should I care about it?</h2>
+			{{ topic.description }}
+
+		<h2>Where can I learn about it?</h2>
+			<ul>
+				{% for resource in resources %}
+					<li><a href="{{ resource.link }}">{{ resource.title }}</a>{% if resource.origin %} in {{ resource.origin }}{% endif %} [{{ resource.medium }}]. Difficulty level: {{ resource.difficulty }}. Style: {{ resource.style }}.</li>
+				{% endfor %}
+			</ul>
+
+		{% if advanced_resources %}
+			<h2>Where can I find out more about it?</h2>
+			<ul>
+				{% for resource in advanced_resources %}
+					<li><a href="{{ resource.link }}">{{ resource.title }}</a> {% if resource.origin %} from {{ resource.origin }} {% endif %} [{{ resource.medium }}]. Difficulty level: {{ resource.difficulty }}.{% if resource.style %} Style: {{ resource.style }}.{% endif %}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+		{% if further_topics %}
+			<h2>What's next?</h2>
+			<ul>
+				{% for topic in further_topics %}
+					<li><a href="{{ topic.link }}">{{ topic.title }}</a>{% if area %}, if you're interested in {{ topic.area }}{% endif %}.</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</body>
+</html>
