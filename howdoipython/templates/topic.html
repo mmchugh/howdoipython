@@ -3,20 +3,27 @@
 <html>
 	<head>
 		<title>
-			{{ topic.title }} - How do I Python?
+			{{ title }} - How do I Python?
 		</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/topic.css" />
 	</head>
 
 	<body>
-		<h1> {{ topic.title }}</h1>
+		<h1> {{ title }}</h1>
 
 		<h2>Why should I care about it?</h2>
-			{{ topic.description }}
+			{{ description }}
 
 		<h2>Where can I learn about it?</h2>
 			<ul>
 				{% for resource in resources %}
-					<li><a href="{{ resource.link }}">{{ resource.title }}</a>{% if resource.origin %} in {{ resource.origin }}{% endif %} [{{ resource.medium }}]. Difficulty level: {{ resource.difficulty }}. Style: {{ resource.style }}.</li>
+					<li>
+						<h3><a href="{{ resource.link }}">{{ resource.title }}</a> in {{ resource.origin }} [{{ resource.medium }}].</h3>
+						<ul>
+							<li>Difficulty level: {{ resource.difficulty }}.</li>
+							<li>Style: {{ resource.style }}.</li>
+						</ul>
 				{% endfor %}
 			</ul>
 
@@ -24,7 +31,12 @@
 			<h2>Where can I find out more about it?</h2>
 			<ul>
 				{% for resource in advanced_resources %}
-					<li><a href="{{ resource.link }}">{{ resource.title }}</a> {% if resource.origin %} from {{ resource.origin }} {% endif %} [{{ resource.medium }}]. Difficulty level: {{ resource.difficulty }}.{% if resource.style %} Style: {{ resource.style }}.{% endif %}</li>
+					<li>
+						<h3><a href="{{ resource.link }}">{{ resource.title }}</a> {% if resource.origin %} from {{ resource.origin }} {% endif %} [{{ resource.medium }}].</h3>
+						<ul>
+							<li>Difficulty level: {{ resource.difficulty }}.{% if resource.style %}</li>
+							<li>Style: {{ resource.style }}.{% endif %}</li>
+						</ul>
 				{% endfor %}
 			</ul>
 		{% endif %}
