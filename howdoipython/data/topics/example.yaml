@@ -1,0 +1,20 @@
+title: Example
+area: Foundation
+resources:
+    - title: Lists
+      link: www.learnpythonthehardway.com/chapter6
+      origin: lpthw
+      origin_link: www.learnpythonthehardway.com
+      medium: web
+      style: hands
+      difficulty: 3
+    - title: Lists
+      link: www.diveintopython.com/chapter3
+      origin: dip
+      origin_link: www.diveintopython.com
+      medium: web
+      style: hands-on
+      difficulty: 2
+further_topics:
+    - object_oriented
+    - decorators
