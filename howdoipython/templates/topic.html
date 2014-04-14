@@ -1,0 +1,53 @@
+<DOCTYPE html>
+
+<html>
+	<head>
+		<title>
+			{{ title }} - How do I Python?
+		</title>
+
+		<link rel="stylesheet" type="text/css" href="../css/topic.css" />
+	</head>
+
+	<body>
+		<h1> {{ title }}</h1>
+
+		<h2>Why should I care about it?</h2>
+			{{ description }}
+
+		<h2>Where can I learn about it?</h2>
+			<ul>
+				{% for resource in resources %}
+					<li>
+						<h3><a href="{{ resource.link }}">{{ resource.title }}</a> in {{ resource.origin }} [{{ resource.medium }}].</h3>
+						<ul>
+							<li>Difficulty level: {{ resource.difficulty }}.</li>
+							<li>Style: {{ resource.style }}.</li>
+						</ul>
+				{% endfor %}
+			</ul>
+
+		{% if advanced_resources %}
+			<h2>Where can I find out more about it?</h2>
+			<ul>
+				{% for resource in advanced_resources %}
+					<li>
+						<h3><a href="{{ resource.link }}">{{ resource.title }}</a> {% if resource.origin %} from {{ resource.origin }} {% endif %} [{{ resource.medium }}].</h3>
+						<ul>
+							<li>Difficulty level: {{ resource.difficulty }}.{% if resource.style %}</li>
+							<li>Style: {{ resource.style }}.{% endif %}</li>
+						</ul>
+				{% endfor %}
+			</ul>
+		{% endif %}
+
+		{% if further_topics %}
+			<h2>What's next?</h2>
+			<ul>
+				{% for topic in further_topics %}
+					<li><a href="{{ topic.link }}">{{ topic.title }}</a>{% if area %}, if you're interested in {{ topic.area }}{% endif %}.</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</body>
+</html>
