@@ -1,6 +1,12 @@
 title: Example
 area: Foundation
 description: why you should learn this topic? here's why?
+prerequisites:
+    - XYZ
+    - ABC
+examples:
+    - description: Blarg
+      file: blarg.py
 resources:
     - title: Lists
       link: www.learnpythonthehardway.com/chapter6

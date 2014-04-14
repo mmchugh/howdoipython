@@ -1,63 +1,130 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<title>
 			{{ title }} - How do I Python?
 		</title>
 
-        <link rel="stylesheet" type="text/css" href="../css/topic.css" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/topic.css" />
 
 	</head>
 
 	<body>
-		<h1> {{ title }}</h1>
 
-		<h2>Why should I care about it?</h2>
-			{{ description }}
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">How do I Python</a>
+			</div>
+			<div class="collapse navbar-collapse">
 
-		<h2>Where can I learn about it?</h2>
-			<ul>
-				{% for resource in resources %}
-					<li>
-						<h3><a href="{{ resource.link }}">{{ resource.title }}</a> in {{ resource.origin }} [{{ resource.medium }}].</h3>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</div>
+
+		<div class='jumbotron'>
+			<div class='container'>
+
+				<div class='row'>
+					<h1>{{ title }}</h1>
+
+					<h2>Why should I care about it?</h2>
+					<p>{{ description }}</p>
+				</div>
+
+				<div class='row'>
+					<h2>Prerequisites</h2>
+					<ul>
+						{% for prerequisite in prerequisites %}
+							<li><a href="{{ prerequisite.link }}">{{ prerequisite.title }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+
+				<div class='row'>
+					<h2>Examples</h2>
+					<ul>
+						{% for example in examples %}
+							<li>
+								<p>{{ example.description }}</p>
+								<pre><code>{{ example.code }}</code></pre>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+
+			</div>
+
+
+		</div>
+
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-4'>
+					<h2>Where can I learn about it?</h2>
+					<ul>
+						{% for resource in resources %}
+							<li>
+								<h3><a href="{{ resource.link }}">{{ resource.title }}</a> in {{ resource.origin }} - <span class='medium'>{{ resource.medium }}</span></h3>
+								<ul>
+									<li>Difficulty level: {{ resource.difficulty }}</li>
+									<li>Style: {{ resource.style }}</li>
+								</ul>
+						{% endfor %}
+					</ul>
+				</div>
+
+				{% if advanced_resources %}
+					<div class='col-md-4'>
+						<h2>Where can I find out more about it?</h2>
 						<ul>
-							<li>Difficulty level: {{ resource.difficulty }}.</li>
-							<li>Style: {{ resource.style }}.</li>
+							{% for resource in advanced_resources %}
+								<li>
+									<h3><a href="{{ resource.link }}">{{ resource.title }}</a> {% if resource.origin %} from {{ resource.origin }} {% endif %} - <span class='medium'>{{ resource.medium }}</span></h3>
+									<ul>
+										<li>Difficulty level: {{ resource.difficulty }}</li>
+										{% if resource.style %}<li>Style: {{ resource.style }}</li>{% endif %}
+									</ul>
+							{% endfor %}
 						</ul>
-				{% endfor %}
-			</ul>
+					</div>
+				{% endif %}
 
-		{% if advanced_resources %}
-			<h2>Where can I find out more about it?</h2>
-			<ul>
-				{% for resource in advanced_resources %}
-					<li>
-						<h3><a href="{{ resource.link }}">{{ resource.title }}</a> {% if resource.origin %} from {{ resource.origin }} {% endif %} [{{ resource.medium }}].</h3>
+				{% if further_topics %}
+					<div class='col-md-4'>
+						<h2>What's next?</h2>
 						<ul>
-							<li>Difficulty level: {{ resource.difficulty }}.{% if resource.style %}</li>
-							<li>Style: {{ resource.style }}.{% endif %}</li>
+							{% for topic in further_topics %}
+								<li><a href="{{ topic.link }}">{{ topic.title }}</a>{% if topic.area %}, if you're interested in {{ topic.area }}{% endif %}</li>
+							{% endfor %}
 						</ul>
-				{% endfor %}
-			</ul>
-		{% endif %}
+					</div>
+				{% endif %}
 
-		{% if further_topics %}
-			<h2>What's next?</h2>
-			<ul>
-				{% for topic in further_topics %}
-					<li><a href="{{ topic.link }}">{{ topic.title }}</a>{% if area %}, if you're interested in {{ topic.area }}{% endif %}.</li>
-				{% endfor %}
-			</ul>
-		{% endif %}
+
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
 	</body>
 </html>
