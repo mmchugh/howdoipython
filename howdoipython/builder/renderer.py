@@ -3,7 +3,7 @@ env = Environment(loader=PackageLoader('howdoipython', 'templates'))
 
 from . import parser
 
-DATA_PATH = 'data/{topic}.yaml'
+DATA_PATH = 'data/{0}.yaml'
 
 
 def build_topic_html(topic):
