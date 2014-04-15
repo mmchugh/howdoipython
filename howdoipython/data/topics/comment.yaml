@@ -1,12 +1,12 @@
 title: Comment your code
 area: Foundation
-description: <p>Keep track of what you're doing for the future: leave comments in your code!</p>
+description: "<p>Keep track of what you're doing for the future: leave comments in your code!</p>"
 prerequisites:
     - write-something
 examples:
     - description: |
-      You might come back to your code at a later date, and don't remember what you wanted to do. Writing a description of your code is a good idea.
-      This description is called a comment.
+                    You might come back to your code at a later date, and don't remember what you wanted to do. Writing a description of your code is a good idea.
+                    This description is called a comment.
       file: comment.py
 resources:
     - title: Comments and Pound Characters

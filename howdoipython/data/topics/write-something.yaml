@@ -1,7 +1,7 @@
 title: Write something
 area: Foundation
 description: |
-With Python, you can tell your computer to write something on your screen in just one line.
+              With Python, you can tell your computer to write something on your screen in just one line.
 prerequisites: 
     - setup
 examples:
@@ -26,7 +26,7 @@ resources:
       difficulty: 2
     - title: The way of the program
       link: http://greenteapress.com/thinkpython/html/thinkpython002.html
-      origin: Think Python: How to Think Like a Computer Scientist
+      origin: "Think Python: How to Think Like a Computer Scientist"
       origin_link: http://greenteapress.com/thinkpython/html/index.html
       medium: web
       style: theory
