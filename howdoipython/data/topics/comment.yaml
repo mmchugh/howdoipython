@@ -1,6 +1,6 @@
-title: Comment your code
+title: "Comment your code"
 area: Foundation
-description: "<p>Keep track of what you're doing for the future: leave comments in your code!</p>"
+description: "Keep track of what you're doing for the future: leave comments in your code!"
 prerequisites:
     - write-something
 examples:
@@ -9,16 +9,16 @@ examples:
                     This description is called a comment.
       file: comment.py
 resources:
-    - title: Comments and Pound Characters
+    - title: "Comments and Pound Characters"
       link: http://learnpythonthehardway.org/book/ex2.html
-      origin: Learn Python The Hard Way
+      origin: "Learn Python The Hard Way"
       origin_link: http://www.learnpythonthehardway.com
       medium: web
       style: hands-on
       difficulty: 1
-    - title: The Beginning - Comments
+    - title: "The Beginning - Comments"
       link: http://pymbook.readthedocs.org/en/latest/thebeginning.html#comments
-      origin: Python for You and Me
+      origin: "Python for You and Me"
       origin_link: http://pymbook.readthedocs.org/en/latest/index.html
       medium: web
       style: guide

@@ -1,19 +1,19 @@
-title: Some mathematics
+title: "Some mathematics"
 area: Foundation
-description: <p>You can use Python as a calculator.</p>
-prerequisites: 
+description: "You can use Python as a calculator."
+prerequisites:
     - variables
 resources:
-    - title: Numbers and Math
+    - title: "Numbers and Math"
       link: http://learnpythonthehardway.org/book/ex3.html
-      origin: Learn Python The Hard Way
+      origin: "Learn Python The Hard Way"
       origin_link: http://www.learnpythonthehardway.com
       medium: web
       style: hands-on
       difficulty: 1
-    - title: Operators and expressions
+    - title: "Operators and expressions"
       link: http://pymbook.readthedocs.org/en/latest/operatorsexpressions.html
-      origin: Python for You and Me
+      origin: "Python for You and Me"
       origin_link: http://pymbook.readthedocs.org/en/latest/index.html
       medium: web
       style: guide
