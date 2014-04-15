@@ -1,0 +1,20 @@
+title: "Variables"
+area: Foundation
+description: "We often need to give a name to the things that we're working with. This is called assigning a value to a variable."
+resources:
+    - title: "Numbers and Math"
+      link: http://learnpythonthehardway.org/book/ex4.html
+      origin: "Learn Python The Hard Way"
+      origin_link: http://www.learnpythonthehardway.com
+      medium: web
+      style: hands-on
+      difficulty: 1
+    - title: "Variables and Datatypes"
+      link: http://pymbook.readthedocs.org/en/latest/variablesanddatatypes.html
+      origin: "Python for You and Me"
+      origin_link: http://pymbook.readthedocs.org/en/latest/index.html
+      medium: web
+      style: guide
+      difficulty: 3
+further_topics:
+    - numbers

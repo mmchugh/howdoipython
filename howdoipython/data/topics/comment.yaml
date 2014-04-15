@@ -1,0 +1,27 @@
+title: "Comment your code"
+area: Foundation
+description: "Keep track of what you're doing for the future: leave comments in your code!"
+prerequisites:
+    - write-something
+examples:
+    - description: |
+                    You might come back to your code at a later date, and don't remember what you wanted to do. Writing a description of your code is a good idea.
+                    This description is called a comment.
+      file: comment.py
+resources:
+    - title: "Comments and Pound Characters"
+      link: http://learnpythonthehardway.org/book/ex2.html
+      origin: "Learn Python The Hard Way"
+      origin_link: http://www.learnpythonthehardway.com
+      medium: web
+      style: hands-on
+      difficulty: 1
+    - title: "The Beginning - Comments"
+      link: http://pymbook.readthedocs.org/en/latest/thebeginning.html#comments
+      origin: "Python for You and Me"
+      origin_link: http://pymbook.readthedocs.org/en/latest/index.html
+      medium: web
+      style: guide
+      difficulty: 1
+further_topics:
+    - variables
