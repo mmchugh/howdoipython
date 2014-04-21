@@ -1,6 +1,6 @@
 from os import path, makedirs, walk
 
-from howdoipython.builder import renderer
+from howdoipython.builder import renderer, parser
 
 
 def build_topics(output_path, topics_path='topics'):
@@ -23,15 +23,20 @@ def build_topics(output_path, topics_path='topics'):
         print "No topics found in path {0}".format(full_path)
         return
 
+    topic_data = {}
+
     for topic_file in files:
         topic, extension = path.splitext(topic_file)
         if extension == '.yaml':
-            file_path = output_path_template.format(topic)
-            with open(file_path, "w") as output_file:
-                output_file.write(renderer.build_topic_html(topic))
-            print "Wrote to {0}".format(file_path)
+            topic_data[topic] = parser.get_topic_data(topic)
         else:
             print "Unknown type for topic file: {0}".format(topic_file)
+
+    for topic, data in topic_data.items():
+        file_path = output_path_template.format(topic)
+        with open(file_path, "w") as output_file:
+            output_file.write(renderer.build_topic_html(topic, data))
+        print "Wrote to {0}".format(file_path)
 
 
 def build_all(output_path='output'):
